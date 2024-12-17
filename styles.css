@@ -1,0 +1,944 @@
+/* Общие стили */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+    color: #fff;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+  }
+  
+  header .logo img {
+    height: 50px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav ul li a.active {
+    color: #ff4500;
+  }
+  
+  header .search input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #hero .hero-content h1 {
+    font-size: 48px;
+    color: #ff4500;
+  }
+  
+  #hero .hero-content p {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  
+  #hero .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  #hero .buttons a {
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  #hero .buttons .btn-buy {
+    background-color: #ff4500;
+  }
+  
+  #hero .buttons .btn-trailer {
+    background-color: #333;
+  }
+  
+  /* Раздел "О игре" */
+  #about {
+    padding: 50px;
+    background-color: #1a1a1a;
+  }
+  
+  #about h2 {
+    font-size: 36px;
+    color: #ff4500;
+  }
+  
+  #about .gallery {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  #about .gallery img {
+    width: 33%;
+    border-radius: 10px;
+  }
+  
+  /* Раздел "Особенности игры" */
+  #features {
+    padding: 50px;
+    background-color: #0e0e0e;
+  }
+  
+  #features h2 {
+    font-size: 36px;
+    color: #ff4500;
+  }
+  
+  #features ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #features ul li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  #features img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Раздел "Media" */
+  #media {
+    padding: 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+  }
+  
+  #media .media-gallery {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  #media .media-gallery img {
+    width: 33%;
+    border-radius: 10px;
+  }
+  
+  #media .btn-media {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #ff4500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Раздел "Форум" */
+  #forum {
+    padding: 50px;
+    background-color: #0e0e0e;
+    text-align: center;
+  }
+  
+  #forum .btn-forum {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Подвал */
+  footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer .social img {
+    height: 30px;
+    margin: 0 10px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  footer ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #hero-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабирует гифку, чтобы она заполнила всю секцию */
+    z-index: -1; /* Помещает гифку позади контента */
+  }
+  
+  #hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1; /* Помещает контент поверх гифки */
+  }
+/* Раздел "Особенности игры" */
+#features {
+  position: relative;
+  padding: 0px 0;
+  background-color: #0e0e0e;
+  text-align: center;
+}
+
+#features h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+#features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+#features ul li {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+/* Контейнер для изображения */
+.feature-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Высота изображения */
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+/* Стили для изображения */
+.feature-image {
+  width: 100%; /* Растягивает изображение на всю ширину */
+  height: 100%; /* Растягивает изображение на всю высоту */
+  object-fit: cover; /* Масштабирует изображение, чтобы оно заполнило контейнер */
+  object-position: center; /* Центрирует изображение */
+}
+/* Hero Section для страницы покупки */
+#buy-hero {
+  background: url('buy-hero-bg.jpg') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#buy-hero .hero-content h1 {
+  font-size: 48px;
+  color: #ff4500;
+}
+
+#buy-hero .hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* Раздел "Выбор издания" */
+#editions {
+  padding: 50px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+#editions h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 40px;
+}
+
+.edition-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.edition-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.edition-card:hover {
+  transform: translateY(-10px);
+}
+
+.edition-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.edition-card h3 {
+  font-size: 24px;
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+.edition-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.edition-card .price {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.edition-card .btn-buy {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Раздел "Где купить" */
+#where-to-buy {
+  padding: 50px;
+  background-color: #0e0e0e;
+  text-align: center;
+}
+
+#where-to-buy h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+#where-to-buy p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.store-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.store-links a img {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.store-links a img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section для страницы Media */
+#media-hero {
+  background: url('media-hero-bg.jpg') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#media-hero .hero-content h1 {
+  font-size: 48px;
+  color: #ff4500;
+}
+
+#media-hero .hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* Раздел "Персонажи" */
+#characters {
+  padding: 50px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+#characters h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 40px;
+}
+
+.character-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-10px);
+}
+
+.character-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.character-card h3 {
+  font-size: 24px;
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+.character-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Раздел "Фракции" */
+#factions {
+  padding: 50px;
+  background-color: #0e0e0e;
+  text-align: center;
+}
+
+#factions h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 40px;
+}
+
+.faction-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.faction-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.faction-card:hover {
+  transform: translateY(-10px);
+}
+
+.faction-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.faction-card h3 {
+  font-size: 24px;
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+.faction-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+/* Hero Section для страницы входа */
+#login-hero {
+  background: url('login-hero-bg.jpg') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#login-hero .hero-content h1 {
+  font-size: 48px;
+  color: #ff4500;
+}
+
+#login-hero .hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* Форма входа */
+#login-form-section {
+  padding: 50px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.login-form-container {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.login-form-container h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #e63f00;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.register-link a {
+  color: #ff4500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section для страницы регистрации */
+#register-hero {
+  background: url('register-hero-bg.jpg') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#register-hero .hero-content h1 {
+  font-size: 48px;
+  color: #ff4500;
+}
+
+#register-hero .hero-content p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* Форма регистрации */
+#register-form-section {
+  padding: 50px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.register-form-container {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 40px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.register-form-container h2 {
+  font-size: 36px;
+  color: #ff4500;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btn-register {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+  background-color: #e63f00;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.login-link a {
+  color: #ff4500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.modal-content h2 {
+  color: #333;
+}
+
+.modal-content p {
+  color: #555;
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#confirm-purchase {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#cancel-purchase {
+  background-color: #f44336;
+  color: white;
+}
+/* Форум */
+.forum-form {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+}
+
+.forum-form h2 {
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+.forum-form .form-group {
+  margin-bottom: 15px;
+}
+
+.forum-form label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.forum-form input,
+.forum-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.forum-form button {
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forum-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.forum-post {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.forum-post h3 {
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+.forum-post p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.btn-vote {
+  background-color: #444;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Форма создания новой записи */
+.forum-form {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #1a1a1a; /* Темный фон формы */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.forum-form h2 {
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+.forum-form .form-group {
+  margin-bottom: 15px;
+}
+
+.forum-form label {
+  display: block;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* Темный фон для текстового поля */
+.forum-input,
+.forum-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #222; /* Темный фон текстового поля */
+  color: #fff; /* Белый текст */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.forum-input:focus,
+.forum-textarea:focus {
+  border-color: #ff4500; /* Цвет границы при фокусе */
+  outline: none;
+}
+
+/* Красивая кнопка "Создать" */
+.btn-create {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff4500; /* Оранжевый цвет кнопки */
+  color: #fff; /* Белый текст */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-create:hover {
+  background-color: #e63f00; /* Темнее при наведении */
+  transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.btn-create:active {
+  transform: scale(0.95); /* Уменьшение при нажатии */
+}
+
+/* Краткое описание темы */
+.post-description {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Кнопка удаления правее */
+.btn-delete {
+  background-color: #f44336;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right; /* Перемещаем кнопку правее */
+  margin-left: 10px; /* Отступ между кнопками */
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f;
+}
